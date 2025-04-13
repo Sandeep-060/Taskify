@@ -14,4 +14,7 @@ Taskify is a custom-built, clean, and interactive todo list app that helps you s
 - CSS
 - JavaScript
 
+## 🌐 Live Demo
+
+👉 [Check out the live app here](https://taskify-flax-six.vercel.app/)
 
