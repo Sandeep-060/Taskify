@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffd9d9;
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 2px;
+  height: 100vh;
+}
+
+.container{
+  background: linear-gradient(120deg, #ff6464, #a55a5a, #dd3f3f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  margin: 100px auto;
+  padding-top: 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow:0 0 12px 0.5px rgb(250, 0, 0) ;
+}
+@media (max-width:900px) {
+  .container{
+    max-width: 70%;
+  }
+}
+@media (max-width:700px) {
+  .container{
+    max-width: 90%;
+  }
+}
+.top{
+  position: relative;
+  width: 100%;
+}
+
+.top h2{
+  text-align: center;
+}
+.toggle-dark{
+  position: absolute;
+  right: 10px;
+  top:6px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: black;
+}
+.input{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+.input input{
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow:0 0 5px 0.5px rgb(250, 0, 0) ;
+}
+.input input[type="text"]{
+  width: 60%;
+}
+.input input[type="button"]{
+  padding:0 20px;
+  cursor: pointer;
+}
+
+.tasklist{
+  width: 100%;
+  padding: 20px;
+}
+.summary {
+  font-size: 14px;
+  margin:0px 12px 20px 12px;
+  font-weight: bold;
+  color: #444;
+  transition: color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+}
+.sum-task{
+  background-color: rgb(255, 254, 254);
+  border-radius:20px;
+  padding:5px 10px;
+}
+.sum-task:hover{
+  cursor: pointer;
+  color: #f1aaaa;
+}
+.tasklist ul li{
+  background-color: #fff;
+  border-radius: 10px;
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 2px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition:background-color 1s;
+}
+
+.left-part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff4d4d;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.task-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #1e7900;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.btngrp{
+  margin-right:-20px ;
+}
+.btn{
+  padding: 5px 10px;
+  margin: 5px ;
+  border-radius: 10px;
+  border: none;
+  box-shadow:0 0 5px 0.5px rgb(250, 0, 0) ;
+  font-size:1.1rem ;
+  color: white;
+  cursor: pointer;
+} 
+
+.editbtn{
+  background-color: green;
+}
+.editbtn:hover{
+  background-color: #3cb371;
+}
+.clearbtn{
+  color: black;
+}
+.clearbtn:hover {
+  background-color: #f8c4c4;
+  color: #121010;
+}
+
+.removebtn{
+  background-color: red;
+}
+.removebtn:hover{
+  background-color: #c03939;
+}
+@media (max-width: 500px) {
+  .input {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 90%;
+  }
+  .input input[type="text"],
+  .input input[type="button"] {
+    width: 100%;
+    padding: 5px;
+  }
+  .tasklist{
+    padding: 10px;
+  }
+  .tasklist ul li {
+    flex-direction: column;
+  }
+
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #2b1212, #7e2b2b, #390606);
+  color: #f5f5f5;
+}
+
+
+.dark-mode .container {
+  background: linear-gradient(135deg, #3a1f1f, #5c2b2b, #7e3d3d); 
+  box-shadow: 0 0 12px 2px rgba(255, 100, 100, 0.2);
+  color: #f3f3f3;
+}
+
+
+.dark-mode .input input,
+.dark-mode .btn {
+  background-color: #545353;
+  color: #fff;
+  box-shadow: 0 0 5px 0.5px #000;
+}
+.dark-mode .tasklist ul li {
+  background: linear-gradient(145deg, #3a1f1f, #4b2c2c) !important;
+  color: #f2f2f2 !important; 
+}
+
+
+.dark-mode .input input::placeholder {
+  color: #ccc;
+}
+
+.dark-mode .input input[type="button"] {
+  background-color: #006600
+}
+
+.dark-mode .input input[type="button"]:hover {
+  background-color: #00a000;
+  color: #e5ffe5;
+}
+
+
+.dark-mode .removebtn {
+  background-color: #a33a3a;
+  color: #fff;
+  box-shadow: 0 0 6px 1px rgba(255, 0, 0, 0.3);
+}
+
+.dark-mode .removebtn:hover {
+  background-color: #c03939;
+}
+
+
+.dark-mode .editbtn {
+  background-color: #2e8b57; 
+  color: #fff;
+  box-shadow: 0 0 6px 1px rgba(46, 139, 87, 0.4);
+}
+
+.dark-mode .editbtn:hover {
+  background-color: #3cb371; 
+}
+
+.dark-mode .clearbtn {
+  background-color: #444; 
+  color: #fff;
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .clearbtn:hover {
+  background-color: #555;
+  color: #ffbdbd;
+}
+
+
+.dark-mode .summary {
+  color: #201f1f;
+}
+
+.dark-mode .task-checkbox {
+  background-color: #2f2f2f;
+  border: 2px solid #a94c4c; 
+  box-shadow: 0 0 4px rgba(255, 100, 100, 0.3);
+}
+
+.dark-mode .task-checkbox:checked::after {
+  border: solid #45d945; 
+  border-width: 0 2px 2px 0;
+}
+
+
+.dark-mode .toggle-dark {
+  background-color: #fff;
+  color: #000;
+}
